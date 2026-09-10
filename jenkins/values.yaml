@@ -1,6 +1,7 @@
 ---
 controller:
   JCasC:
+    defaultConfig: false
     securityRealm: none
     authorizationStrategy: unsecured
     configScripts:
@@ -48,7 +49,6 @@ controller:
                     containers:
                       - name: "buildah"
                         image: "quay.io/buildah/stable:latest"
-                        workingDir: "/workspace"
                         command: "sleep"
                         args: "infinity"
                         envVars:
